@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@100;300&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --darkgreen: #028700;
+    --transparent: #00000000;
+    --orange: #CF7C00;
+    --greyish: #ebebeb;
+}
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Lato, 'Lucida Sans',sans-serif;
+    background-image: url("/images/lecture-hall.jpg");
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: default;
+}
+.nav {
+    height: 8vh;
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav .far-left ul {
+    list-style: none;
+    display: flex;
+}
+.nav .far-left ul li{
+    margin: 0 20px 0 20px;
+}
+.nav .far-left ul li button {
+    height: 35px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: var(--transparent);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.nav .far-left ul li button:hover{
+    background-color: white;
+}
+.center{
+    transition: all .3s ease;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    color: white;
+    height: 450px;
+    width: 800px;
+}
+.header-text {
+    color: #ffff;
+    font-size: 8rem;
+    
+}
+.center .lecon {
+    color: var(--orange);
+}
+.center p {
+    height: 40px;
+    width: 80%;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 30px;
+}
+@keyframes bounce {
+    0%{
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* 100%{
+        top: 50%;
+        left: 10%;
+        transform: translate(-10%, -50%);
+    } */
+}
+#create-new-acc-btn{
+    height: 50px;
+    width: 150px;
+    background-color: var(--orange);
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+#create-new-acc-btn:hover{
+    background-color: var(--transparent);
+    color: #ffff;
+}
+/* ========Sign in form styling============ */
+form.sign-in-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    min-height: 60vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-evenly;
+    background-color: var(--greyish);
+    border-radius: 20px;
+    box-shadow: 10px 25px 30px 15px;
+}
+form.sign-in-form h1{
+    color: var(--darkgreen);
+    font-size: 30px;
+}
+form.sign-in-form .lecon {
+    color: var(--orange);
+}
+form.sign-in-form input{
+    height: 50px;
+    width: 90%;
+    font-size: 1.05rem;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+}
+form.sign-in-form input:focus {
+    outline: 2px solid var(--orange);
+    box-shadow:  0 5px 20px 0px var(--orange);
+}
+form.sign-in-form button#sign-in-btn {
+    height: 50px;
+    width: 90%;
+    font-size: 1.15rem;
+    background-color: var(--darkgreen);
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+}
+hr{
+ height: 2px;
+ width: 100%;
+ color: white;
+}
+form.sign-in-form .other-links {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+form.sign-in-form .other-links button {
+    height: 35px;
+    width: 50%;
+    /* border-radius: 10px; */
+    border: none;
+    background-color: var(--orange);
+    color: #ffff;
+    cursor: pointer;
+}
+footer{
+    color: #ffff;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    height: 40px;
+    width: 80vw;
+    text-align: center;
+}
+/* ========Sign up form styling============== */
+form.sign-up-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    min-height: 60vh;
+    max-height: 75vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-evenly;
+    background-color: var(--greyish);
+    border-radius: 20px;
+    box-shadow: 10px 25px 30px 15px;
+}
+form.sign-up-form h1{
+    color: var(--darkgreen);
+    font-size: 30px;
+    text-align: center;
+}
+form.sign-up-form .lecon {
+    color: var(--orange);
+}
+form.sign-up-form input{
+    height: 6vh;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ffff;
+    outline: none;
+    border: none;
+}
+form.sign-up-form input:focus {
+    outline: 2px solid var(--orange);
+    box-shadow:  0 5px 20px 0px var(--orange);
+}
+form.sign-up-form div.name-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+form.sign-up-form div.name-section input{
+    width: 48%;
+}
+form.sign-up-form p#terms {
+    font-size: 12px;
+    text-align: center;
+}
+form.sign-up-form p.error-msg {
+    font-size: 12px;
+    color: red;
+}
+form.sign-up-form button {
+    height: 5vh;
+    width: 80%;
+    color: #ffff;
+    background-color: var(--darkgreen);
+    border: none;
+    cursor: pointer;
+    /* margin-left: 45px; */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+form.sign-up-form a{
+    text-decoration: none;
+    color: purple;
+    font-style: italic;
+}
