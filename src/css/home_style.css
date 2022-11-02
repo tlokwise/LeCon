@@ -82,7 +82,7 @@ h1.logo .lecon {
     align-items: center;
 }
 .nav .nav-center button:hover{
-    background-color: var(--orange);
+    background-color: var(--darkgreen);
     color: #ffff;
 }
 .nav .nav-right {
@@ -95,10 +95,10 @@ h1.logo .lecon {
 .drop-down {
     position: absolute;
     min-height: 35vh;
-    width: 15vw;
+    width: 25vw;
     background-color: yellow;
-    top: 50px;
-    right: 40px;
+    top: 52px;
+    right: 10px;
     border-radius: 10px;
     background-color: #ffff;
     border: 2px solid var(--orange);
@@ -287,7 +287,7 @@ ul {
     
     }
         
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
     /* start of medium tablet styles */
         .container .center {
             width: 100%;
@@ -295,6 +295,9 @@ ul {
         .drop-down {
             width: 30%;
             z-index: 10;
+        }
+        .nav .nav-left {
+            display: none;
         }
     }
         
@@ -306,5 +309,16 @@ ul {
         .drop-down {
             width: 60%;
             min-height: 250px;
+        }
+        .nav .nav-left {
+            display: none;
+        }
+        .nav .nav-right #search-bar {
+            width: 150px;
+        }
+        .drop-down {
+            width: 100vw;
+            height: 40vh;
+            right: 0px;
         }
     }

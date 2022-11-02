@@ -18,11 +18,11 @@ function signInPopup() {
     }
     signInBtn.disabled = true;
     signUpBtn.disabled = false;
-    const signInForm = `<form class="sign-in-form">
+    const signInForm = `<form method="POST" class="sign-in-form" action="./php/signin.php" novalidate>
         <h1 class="header-text">||| Le<span class="lecon">Con |||</span></h1>
         <input type="email" name="email" id="email" placeholder="example@email.com" autocomplete="off" required>
         <input type="password" name="pwd" id="pwd" placeholder="Password" required>
-        <button type="submit" id="sign-in-btn">Sign in</button>
+        <button type="submit" name="signin" id="sign-in-btn">Sign in</button>
         <hr>
         <div class="other-links">
             <button type="button">Create New Account</button>

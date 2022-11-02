@@ -1,7 +1,12 @@
+const home = document.querySelector("#home");
 const menu = document.querySelector('#menu');
 const dropDown = document.querySelector(".drop-down");
 const like = document.querySelectorAll('.like');
+const messages = document.querySelector("#messagesBtn")
 
+//STYLING CURRENT TAB
+home.style.backgroundColor = "#CF7C00";
+home.style.color = "while";
 
 menu.addEventListener('click', menuBtn=>{
     if(menu.innerHTML == `<i class="fa-solid fa-bars"></i>`){
@@ -15,6 +20,9 @@ menu.addEventListener('click', menuBtn=>{
     }
 
 })
+
+//NAVIGATING MENU
+messages.onclick = ()=>{location.href = "./messages.php";}
 
 
 //LIKE BUTTON 
